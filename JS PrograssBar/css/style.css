@@ -1,0 +1,141 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+	background: url(../img/Wllpaper.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.container{
+	text-align: center;
+}
+.progress-container {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	margin-bottom: 30px;
+	max-width: 100%;
+	width: 700px;
+	margin: auto;
+	margin-top: 20px;
+}
+.progress{
+	background-color: rgb(14, 28, 156);
+	position: absolute;
+	width: 0%;
+	height: 4px;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	z-index: -1;
+	transition: .4s ease;
+}
+.progress-container::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	z-index: -1;
+}
+.circle{
+	background-color: #fff;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: black;
+	border: 4px solid green;
+	transition: 0.4s ease;
+}
+.circle.active{
+  border-color: red;
+}
+.btn {
+	background-color: orchid;
+	color: black;
+	font-family: cursive;
+	padding: 4px 48px;
+	outline: none;
+	margin: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	transition: .3s;
+}
+.btn:hover{
+	transform: scaleZ(.98);
+	cursor: pointer;
+}
+.btn:disabled{
+	background-color: rgb(189, 177, 177);
+	cursor: not-allowed;
+}
+.author {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.author {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 2px solid #218c97;
+}
+.author h2 {
+	font-family: cursive;
+	color: #a91515;
+	font-weight: 600;
+	margin: 10px 8px;
+}
+.author h1 {
+	font-family: cursive;
+	color: #1715a9;
+	font-weight: 600;
+	margin: 10px 8px;
+	font-size: 38px;
+}
+
+@media(max-width:992px){
+	.circle{
+		background-color: #fff;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: black;
+		border: 4px solid green;
+		transition: 0.4s ease;
+	}
+	.btn {
+		background-color: orchid;
+		color: black;
+		font-family: cursive;
+		padding: 3px 28px;
+		outline: none;
+		margin: 10px;
+		font-size: 16px;
+		font-weight: bold;
+		transition: .3s;
+	}
+	.author h1 {
+		font-size: 24px;
+	}
+	.author h2 {
+		font-size: 30px;
+	}
+}
